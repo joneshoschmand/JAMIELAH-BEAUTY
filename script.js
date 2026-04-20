@@ -455,4 +455,24 @@ function initContactForm() {
       ticking = true;
     }
   }, { passive: true });
+
+  /* ---------- Cookie Banner ---------- */
+  const cookieBanner = document.getElementById('cookie-banner');
+  const cookieAcceptBtn = document.getElementById('cookie-accept');
+
+  if (cookieBanner && cookieAcceptBtn) {
+    if (!localStorage.getItem('cookieConsent')) {
+      setTimeout(() => {
+        cookieBanner.classList.add('show');
+        cookieBanner.setAttribute('aria-hidden', 'false');
+      }, 1000);
+    }
+
+    cookieAcceptBtn.addEventListener('click', () => {
+      localStorage.setItem('cookieConsent', 'true');
+      cookieBanner.classList.remove('show');
+      cookieBanner.setAttribute('aria-hidden', 'true');
+    });
+  }
+
 })();

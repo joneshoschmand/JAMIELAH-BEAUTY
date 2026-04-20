@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https: 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'self';">
   <meta name="description" content="Jamielah Beauty – Dein Premium Kosmetikstudio in Kaarst & Mönchengladbach. Gesichtsbehandlungen, Wimpern, Permanent Make-Up und mehr.">
   <meta name="keywords" content="Kosmetik, Beauty, Kaarst, Mönchengladbach, Gesichtsbehandlung, Wimpern, Permanent Make-Up, Maniküre, Pediküre">
   <meta name="author" content="Jamielah Beauty">
@@ -548,6 +549,13 @@
                 </div>
               </div>
 
+              <div class="form-consent">
+                <label class="consent-label">
+                  <input type="checkbox" id="contact-consent" name="consent" required>
+                  <span>Ich stimme zu, dass meine Angaben aus dem Kontaktformular zur Beantwortung meiner Anfrage erhoben und verarbeitet werden. Weitere Details in der <a href="datenschutz.html" target="_blank" rel="noopener noreferrer">Datenschutzerklärung</a>. *</span>
+                </label>
+              </div>
+
               <div class="form-submit">
                 <button type="submit" class="btn btn-primary" id="submit-btn">Nachricht senden</button>
               </div>
@@ -632,6 +640,14 @@
       </div>
     </div>
   </footer>
+
+  <!-- ======== COOKIE BANNER ======== -->
+  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie Hinweis" aria-hidden="true">
+    <div class="container cookie-content">
+      <p>Wir verwenden nur technisch notwendige Cookies, um die Grundfunktionen unserer Webseite sicherzustellen. <a href="datenschutz.html">Mehr erfahren</a></p>
+      <button class="btn btn-primary" id="cookie-accept">Verstanden</button>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
