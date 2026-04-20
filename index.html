@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jamielah Beauty – Dein Premium Kosmetikstudio in Kaarst & Mönchengladbach. Gesichtsbehandlungen, Wimpern, Permanent Make-Up und mehr.">
+  <meta name="keywords" content="Kosmetik, Beauty, Kaarst, Mönchengladbach, Gesichtsbehandlung, Wimpern, Permanent Make-Up, Maniküre, Pediküre">
+  <meta name="author" content="Jamielah Beauty">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Jamielah Beauty – Premium Kosmetik in Kaarst & Mönchengladbach">
+  <meta property="og:description" content="Dein Premium Kosmetikstudio in Kaarst & Mönchengladbach. Entdecke unsere exklusiven Treatments und lass dich verwöhnen.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.jamielahbeauty.de">
+  <title>Jamielah Beauty – Premium Kosmetik in Kaarst & Mönchengladbach</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E✨%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+  <!-- ======== HEADER / NAVIGATION ======== -->
+  <header class="site-header" id="site-header">
+    <nav class="container header-inner" aria-label="Hauptnavigation">
+      <a href="#" class="logo" aria-label="Jamielah Beauty – Startseite">Jamielah<span>Beauty</span></a>
+
+      <div class="location-selector" id="location-selector">
+        <button class="location-toggle" id="location-toggle" aria-expanded="false" aria-haspopup="listbox">
+          <span class="location-pin" aria-hidden="true">📍</span>
+          <span class="location-current" id="location-current">Kaarst</span>
+          <span class="location-arrow" aria-hidden="true">▾</span>
+        </button>
+        <ul class="location-dropdown" id="location-dropdown" role="listbox" aria-label="Standort wählen">
+          <li role="option" data-location="kaarst" class="active" aria-selected="true">
+            <span class="loc-name">Kaarst</span>
+            <span class="loc-address">Friedensstraße 14</span>
+          </li>
+          <li role="option" data-location="moenchengladbach" aria-selected="false">
+            <span class="loc-name">Mönchengladbach</span>
+            <span class="loc-address">Eickener Markt 156e</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="nav-links" id="nav-links" role="navigation">
+        <a href="#services">Leistungen</a>
+        <a href="#team">Team</a>
+        <a href="#values">Werte</a>
+        <a href="#contact">Kontakt</a>
+        <a href="#contact" class="btn btn-primary nav-cta">Termin buchen</a>
+      </div>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav-links">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+    <div class="mobile-overlay" id="mobile-overlay"></div>
+  </header>
+
+  <main>
+
+    <!-- ======== HERO SECTION ======== -->
+    <section class="hero" id="hero" aria-labelledby="hero-heading">
+      <div class="hero-bg" aria-hidden="true">
+        <img src="images/IMG_1287 2.JPG" alt="" class="hero-bg-image" loading="eager">
+        <div class="hero-bg-overlay"></div>
+      </div>
+      <div class="container hero-content">
+        <span class="hero-label" id="hero-label">Premium Kosmetik in Kaarst & Mönchengladbach</span>
+        <h1 class="hero-heading" id="hero-heading">
+          <span class="word"><span class="word-inner">Deine</span></span>
+          <span class="word"><span class="word-inner"><em>Schönheit.</em></span></span>
+          <br>
+          <span class="word"><span class="word-inner">Unsere</span></span>
+          <span class="word"><span class="word-inner"><em>Leidenschaft.</em></span></span>
+        </h1>
+        <p class="hero-subtext">
+          Erlebe exklusive Beauty-Treatments in einer Atmosphäre, die zum Entspannen einlädt. Wir bringen deine natürliche Schönheit zum Strahlen.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Termin vereinbaren</a>
+          <a href="#services" class="btn btn-outline btn-outline-hero">Unsere Leistungen</a>
+        </div>
+      </div>
+      <div class="hero-scroll-indicator" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ======== SERVICES SECTION ======== -->
+    <section class="services" id="services" aria-labelledby="services-heading">
+      <div class="container">
+        <header class="services-header">
+          <span class="section-label reveal">Unsere Leistungen</span>
+          <h2 class="section-heading reveal" id="services-heading">Exklusive Treatments für dich</h2>
+          <p class="section-subtext reveal">Jede Behandlung wird individuell auf deine Bedürfnisse abgestimmt – für sichtbare Ergebnisse und pure Entspannung.</p>
+        </header>
+
+        <div class="services-grid stagger-children">
+          <!-- Service 1: Gesichtsbehandlungen -->
+          <article class="service-card reveal" style="--stagger-index: 0">
+            <div class="service-icon" aria-hidden="true">🌸</div>
+            <h3>Gesichtsbehandlungen</h3>
+            <p>Tiefenwirksame Facials für strahlende, gesunde Haut – von Microneedling bis Aquafacial.</p>
+            <span class="service-price">ab 30 €</span>
+            <button class="btn-services-detail" data-modal="modal-gesicht" aria-label="Gesichtsbehandlungen Preisliste anzeigen">Dienstleistungen anzeigen</button>
+          </article>
+
+          <!-- Service 2: Wimpern & Brauen -->
+          <article class="service-card reveal" style="--stagger-index: 1">
+            <div class="service-icon" aria-hidden="true">✨</div>
+            <h3>Wimpern &amp; Brauen</h3>
+            <p>Perfekt geformte Augenbrauen und volle Wimpern. Lifting, Laminierung und Färben.</p>
+            <span class="service-price">ab 15 €</span>
+            <button class="btn-services-detail" data-modal="modal-wimpern" aria-label="Wimpern & Brauen Preisliste anzeigen">Dienstleistungen anzeigen</button>
+          </article>
+
+          <!-- Service 3: Maniküre & Pediküre -->
+          <article class="service-card reveal" style="--stagger-index: 2">
+            <div class="service-icon" aria-hidden="true">💅</div>
+            <h3>Maniküre &amp; Pediküre</h3>
+            <p>Gepflegte Hände und Füße mit hochwertigen Produkten. Inkl. Massage und medizinischer Fußpflege.</p>
+            <span class="service-price">ab 39 €</span>
+            <button class="btn-services-detail" data-modal="modal-nails" aria-label="Maniküre & Pediküre Preisliste anzeigen">Dienstleistungen anzeigen</button>
+          </article>
+
+          <!-- Service 4: Permanent Make-Up -->
+          <article class="service-card reveal" style="--stagger-index: 3">
+            <div class="service-icon" aria-hidden="true">💎</div>
+            <h3>Permanent Make-Up</h3>
+            <p>Natürlich schöne Ergebnisse für Augenbrauen, Lippen und Eyeliner mit modernsten Techniken.</p>
+            <span class="service-price">ab 60 €</span>
+            <button class="btn-services-detail" data-modal="modal-pmu" aria-label="Permanent Make-Up Preisliste anzeigen">Dienstleistungen anzeigen</button>
+          </article>
+
+          <!-- Service 5: Dauerhafte Haarentfernung -->
+          <article class="service-card reveal" style="--stagger-index: 4">
+            <div class="service-icon" aria-hidden="true">⚡</div>
+            <h3>Dauerhafte Haarentfernung</h3>
+            <p>Glatte Haut mit modernster Diodenlaser-Technologie. Einzelbereiche und Ganzkörper-Pakete.</p>
+            <span class="service-price">ab 30 €</span>
+            <button class="btn-services-detail" data-modal="modal-laser" aria-label="Haarentfernung Preisliste anzeigen">Dienstleistungen anzeigen</button>
+          </article>
+
+          <!-- Service 6: Wellness & Entspannung -->
+          <article class="service-card reveal" style="--stagger-index: 5">
+            <div class="service-icon" aria-hidden="true">🧖</div>
+            <h3>Wellness &amp; Entspannung</h3>
+            <p>Gönn dir eine Auszeit mit entspannenden Massagen und Verwöhn-Treatments für Körper und Seele.</p>
+            <span class="service-price">ab 59 €</span>
+            <button class="btn-services-detail" data-modal="modal-wellness" aria-label="Wellness Preisliste anzeigen">Dienstleistungen anzeigen</button>
+          </article>
+        </div>
+      </div>
+      
+      <!-- Modal Overlays -->
+      <!-- Gesichtsbehandlungen Modal -->
+      <div class="service-modal-overlay" id="modal-gesicht" aria-hidden="true">
+        <div class="service-modal" role="dialog" aria-labelledby="modal-gesicht-title">
+          <button class="modal-close" aria-label="Schließen">&times;</button>
+          <div class="modal-header">
+            <span class="modal-icon">🌸</span>
+            <h3 id="modal-gesicht-title">Gesichtsbehandlungen</h3>
+          </div>
+          <div class="modal-body">
+            <table class="price-table">
+              <tbody>
+                <tr><td>Hautanalyse + Skin Care Routine</td><td>30 €</td></tr>
+                <tr><td>Intensive Gesichtsreinigung</td><td>89 €</td></tr>
+                <tr><td>Anti-Aging Behandlung</td><td>99 €</td></tr>
+                <tr><td>Microneedling</td><td>119 €</td></tr>
+                <tr><td>Microdermabrasion</td><td>89 €</td></tr>
+                <tr><td>Aquafacial</td><td>119 €</td></tr>
+                <tr><td>Algenpeeling</td><td>169 €</td></tr>
+                <tr><td>Aquafacial + Microneedling</td><td>179 €</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Wimpern & Brauen Modal -->
+      <div class="service-modal-overlay" id="modal-wimpern" aria-hidden="true">
+        <div class="service-modal" role="dialog" aria-labelledby="modal-wimpern-title">
+          <button class="modal-close" aria-label="Schließen">&times;</button>
+          <div class="modal-header">
+            <span class="modal-icon">✨</span>
+            <h3 id="modal-wimpern-title">Wimpern &amp; Brauen</h3>
+          </div>
+          <div class="modal-body">
+            <table class="price-table">
+              <tbody>
+                <tr><td>Augenbrauen zupfen</td><td>15 €</td></tr>
+                <tr><td>Augenbrauen färben</td><td>15 €</td></tr>
+                <tr><td>Färben &amp; Zupfen</td><td>25 €</td></tr>
+                <tr><td>Lashlifting <span class="price-note">inkl. Färben</span></td><td>59 €</td></tr>
+                <tr><td>Augenbrauenlifting <span class="price-note">inkl. Färben</span></td><td>59 €</td></tr>
+                <tr><td>Augenbrauenlifting + Wimpernlifting</td><td>89 €</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Maniküre & Pediküre Modal -->
+      <div class="service-modal-overlay" id="modal-nails" aria-hidden="true">
+        <div class="service-modal" role="dialog" aria-labelledby="modal-nails-title">
+          <button class="modal-close" aria-label="Schließen">&times;</button>
+          <div class="modal-header">
+            <span class="modal-icon">💅</span>
+            <h3 id="modal-nails-title">Maniküre &amp; Pediküre</h3>
+          </div>
+          <div class="modal-body">
+            <table class="price-table">
+              <tbody>
+                <tr><td>Maniküre <span class="price-note">inkl. Massage</span></td><td>39 €</td></tr>
+                <tr><td>Pediküre</td><td>39 €</td></tr>
+                <tr><td>Medizinische Fußpflege</td><td>47 €</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Permanent Make-Up Modal -->
+      <div class="service-modal-overlay" id="modal-pmu" aria-hidden="true">
+        <div class="service-modal" role="dialog" aria-labelledby="modal-pmu-title">
+          <button class="modal-close" aria-label="Schließen">&times;</button>
+          <div class="modal-header">
+            <span class="modal-icon">💎</span>
+            <h3 id="modal-pmu-title">Permanent Make-Up</h3>
+          </div>
+          <div class="modal-body">
+            <table class="price-table">
+              <tbody>
+                <tr><td>Powderbrows</td><td>349 €</td></tr>
+                <tr><td>Powderlips <span class="price-note">Kontur + Vollschattierung</span></td><td>349 €</td></tr>
+                <tr><td>Nachbehandlung <span class="price-note">innerhalb 4 Wochen</span></td><td>60 €</td></tr>
+                <tr><td>Lidstrich</td><td>275 €</td></tr>
+                <tr><td>Unterlid</td><td>275 €</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dauerhafte Haarentfernung Modal -->
+      <div class="service-modal-overlay" id="modal-laser" aria-hidden="true">
+        <div class="service-modal service-modal-wide" role="dialog" aria-labelledby="modal-laser-title">
+          <button class="modal-close" aria-label="Schließen">&times;</button>
+          <div class="modal-header">
+            <span class="modal-icon">⚡</span>
+            <h3 id="modal-laser-title">Dauerhafte Haarentfernung</h3>
+            <p class="modal-subtitle">Mit Diodenlaser</p>
+          </div>
+          <div class="modal-body">
+            <h4 class="price-table-heading">Einzelbereiche</h4>
+            <table class="price-table">
+              <tbody>
+                <tr><td>Oberlippe</td><td>30 €</td></tr>
+                <tr><td>Kinn</td><td>40 €</td></tr>
+                <tr><td>Wangen</td><td>50 €</td></tr>
+                <tr><td>Oberlippe &amp; Kinn</td><td>60 €</td></tr>
+                <tr><td>Nacken oder Hals</td><td>70 €</td></tr>
+                <tr><td>Achseln</td><td>60 €</td></tr>
+                <tr><td>Oberarme</td><td>60 €</td></tr>
+                <tr><td>Unterarme</td><td>60 €</td></tr>
+                <tr><td>Arme (komplett)</td><td>100 €</td></tr>
+                <tr><td>Bikini</td><td>50 €</td></tr>
+                <tr><td>Intim</td><td>60 €</td></tr>
+                <tr><td>Po</td><td>50 €</td></tr>
+                <tr><td>Oberschenkel</td><td>100 €</td></tr>
+                <tr><td>Unterschenkel</td><td>100 €</td></tr>
+                <tr><td>Beine (komplett)</td><td>180 €</td></tr>
+                <tr><td>Brust &amp; Bauch</td><td>160 €</td></tr>
+                <tr><td>Füße</td><td>40 €</td></tr>
+              </tbody>
+            </table>
+            <h4 class="price-table-heading">Pakete</h4>
+            <table class="price-table">
+              <tbody>
+                <tr><td>Paket I <span class="price-note">Unterbeine, Unterarme, Intim &amp; Bikini, Po, Achseln</span></td><td>275 €</td></tr>
+                <tr><td>Paket II <span class="price-note">Beine komplett, Achseln, Intim, Bikinizone, Pofalte</span></td><td>310 €</td></tr>
+                <tr><td>Paket III <span class="price-note">Ganzkörper</span></td><td>390 €</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Wellness & Entspannung Modal -->
+      <div class="service-modal-overlay" id="modal-wellness" aria-hidden="true">
+        <div class="service-modal" role="dialog" aria-labelledby="modal-wellness-title">
+          <button class="modal-close" aria-label="Schließen">&times;</button>
+          <div class="modal-header">
+            <span class="modal-icon">🧖</span>
+            <h3 id="modal-wellness-title">Wellness &amp; Entspannung</h3>
+          </div>
+          <div class="modal-body">
+            <table class="price-table">
+              <tbody>
+                <tr><td>Rückenmassage</td><td>59 €</td></tr>
+                <tr><td>Ganzkörpermassage</td><td>79 €</td></tr>
+                <tr><td>Rückenbehandlung <span class="price-note">mit manueller Ausreinigung</span></td><td>79 €</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======== TEAM SECTION ======== -->
+    <section class="team" id="team" aria-labelledby="team-heading">
+      <div class="container">
+        <header class="team-header">
+          <span class="section-label reveal">Unsere Geschäftsführerinnen</span>
+          <h2 class="section-heading reveal" id="team-heading">Die Gesichter hinter Jamielah Beauty</h2>
+          <p class="section-subtext reveal">Zwei starke Frauen, eine Vision – Premium-Kosmetik mit Herz und Leidenschaft an zwei Standorten.</p>
+        </header>
+
+        <div class="team-grid team-grid-2 stagger-children">
+          <!-- Jamielah -->
+          <article class="team-card reveal" style="--stagger-index: 0">
+            <div class="team-photo-wrapper">
+              <img src="images/IMG_7822.JPG" alt="Jamielah – Geschäftsführerin Jamielah Beauty Kaarst" loading="lazy">
+              <div class="team-overlay">
+                <p>Mit ihrer Leidenschaft für Kosmetik und einem untrüglichen Gespür für Ästhetik hat Jamielah den Standort Kaarst aufgebaut – ein Studio, in dem sich jede Kundin besonders fühlt.</p>
+              </div>
+            </div>
+            <h3>Jamielah</h3>
+            <span class="team-role">Geschäftsführerin · Kaarst</span>
+          </article>
+
+          <!-- Aria -->
+          <article class="team-card reveal" style="--stagger-index: 1">
+            <div class="team-photo-wrapper">
+              <img src="images/IMG_7794.JPG" alt="Aria – Geschäftsführerin Jamielah Beauty Mönchengladbach" loading="lazy">
+              <div class="team-overlay">
+                <p>Aria bringt frische Energie und Expertise nach Mönchengladbach. Ihr Anspruch: Jede Kundin soll mit einem Strahlen das Studio verlassen.</p>
+              </div>
+            </div>
+            <h3>Aria</h3>
+            <span class="team-role">Geschäftsführerin · Mönchengladbach</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======== VALUES SECTION ======== -->
+    <section class="values" id="values" aria-labelledby="values-heading">
+      <div class="container">
+        <header class="values-header">
+          <span class="section-label reveal">Unsere Werte</span>
+          <h2 class="section-heading reveal" id="values-heading">Wofür wir stehen</h2>
+          <p class="section-subtext reveal">Diese Werte leiten uns in allem, was wir tun – für dich und dein Wohlbefinden.</p>
+        </header>
+
+        <div class="values-grid stagger-children">
+          <!-- Value 1 -->
+          <article class="value-card reveal" style="--stagger-index: 0">
+            <div class="value-icon" aria-hidden="true"><span>💖</span></div>
+            <h3>Individualität</h3>
+            <p>Jede Kundin ist einzigartig. Wir passen jede Behandlung persönlich an deine Wünsche und Bedürfnisse an.</p>
+          </article>
+
+          <!-- Value 2 -->
+          <article class="value-card reveal" style="--stagger-index: 1">
+            <div class="value-icon" aria-hidden="true"><span>⭐</span></div>
+            <h3>Qualität</h3>
+            <p>Wir arbeiten ausschließlich mit hochwertigen, dermatologisch getesteten Premium-Produkten und modernsten Techniken.</p>
+          </article>
+
+          <!-- Value 3 -->
+          <article class="value-card reveal" style="--stagger-index: 2">
+            <div class="value-icon" aria-hidden="true"><span>🌿</span></div>
+            <h3>Nachhaltigkeit</h3>
+            <p>Verantwortung für unsere Umwelt ist uns wichtig. Wir setzen auf nachhaltige Produkte und ressourcenschonende Prozesse.</p>
+          </article>
+
+          <!-- Value 4 -->
+          <article class="value-card reveal" style="--stagger-index: 3">
+            <div class="value-icon" aria-hidden="true"><span>🤍</span></div>
+            <h3>Wohlbefinden</h3>
+            <p>Bei uns sollst du dich rundum wohlfühlen. Eine Oase der Entspannung, in der du den Alltag vergessen kannst.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======== CONTACT SECTION ======== -->
+    <section class="contact" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact-wrapper">
+          <!-- Contact Info -->
+          <div class="contact-info reveal-left">
+            <span class="section-label">Kontakt</span>
+            <h2 class="section-heading" id="contact-heading">Lass uns in Verbindung bleiben</h2>
+            <p>Wir freuen uns auf deine Nachricht. Vereinbare direkt einen Termin oder stelle uns deine Fragen – wir beraten dich gerne.</p>
+
+            <!-- Location Tabs -->
+            <div class="contact-location-tabs" role="tablist" aria-label="Standort wählen">
+              <button class="contact-tab active" role="tab" data-tab="kaarst" id="tab-kaarst" aria-selected="true" aria-controls="panel-kaarst">📍 Kaarst</button>
+              <button class="contact-tab" role="tab" data-tab="moenchengladbach" id="tab-mg" aria-selected="false" aria-controls="panel-mg">📍 Mönchengladbach</button>
+            </div>
+
+            <!-- Kaarst Details -->
+            <div class="contact-details contact-panel active" id="panel-kaarst" role="tabpanel" aria-labelledby="tab-kaarst">
+              <div class="contact-detail-item">
+                <div class="contact-detail-icon" aria-hidden="true">📍</div>
+                <div>
+                  <h4>Adresse</h4>
+                  <p>Friedensstraße 14<br>41564 Kaarst</p>
+                </div>
+              </div>
+              <div class="contact-detail-item">
+                <div class="contact-detail-icon" aria-hidden="true">👩‍💼</div>
+                <div>
+                  <h4>Geschäftsführerin</h4>
+                  <p>Jamielah</p>
+                </div>
+              </div>
+              <div class="contact-detail-item">
+                <div class="contact-detail-icon" aria-hidden="true">📞</div>
+                <div>
+                  <h4>Telefon</h4>
+                  <p><a href="tel:+491743844410">+49 174 3844410</a></p>
+                </div>
+              </div>
+              <div class="contact-detail-item">
+                <div class="contact-detail-icon" aria-hidden="true">✉️</div>
+                <div>
+                  <h4>E-Mail</h4>
+                  <p><a href="mailto:jamielahbeauty@gmx.de">jamielahbeauty@gmx.de</a></p>
+                </div>
+              </div>
+              <div class="contact-detail-item">
+                <div class="contact-detail-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                </div>
+                <div>
+                  <h4>Instagram</h4>
+                  <p><a href="https://www.instagram.com/jamielahbeauty/" target="_blank" rel="noopener noreferrer">@jamielahbeauty</a></p>
+                </div>
+              </div>
+              <div class="contact-detail-item">
+                <div class="contact-detail-icon" aria-hidden="true">🕐</div>
+                <div>
+                  <h4>Öffnungszeiten</h4>
+                  <p>Mo – Fr: 09:00 – 18:00 Uhr<br>Sa: 09:00 – 14:00 Uhr</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Mönchengladbach Details -->
+            <div class="contact-details contact-panel" id="panel-mg" role="tabpanel" aria-labelledby="tab-mg" hidden>
+              <div class="contact-detail-item">
+                <div class="contact-detail-icon" aria-hidden="true">📍</div>
+                <div>
+                  <h4>Adresse</h4>
+                  <p>Eickener Markt 156e<br>41061 Mönchengladbach</p>
+                </div>
+              </div>
+              <div class="contact-detail-item">
+                <div class="contact-detail-icon" aria-hidden="true">👩‍💼</div>
+                <div>
+                  <h4>Geschäftsführerin</h4>
+                  <p>Aria</p>
+                </div>
+              </div>
+              <div class="contact-detail-item">
+                <div class="contact-detail-icon" aria-hidden="true">📞</div>
+                <div>
+                  <h4>Telefon</h4>
+                  <p><a href="tel:+4917682063222">+49 176 82063222</a></p>
+                </div>
+              </div>
+              <div class="contact-detail-item">
+                <div class="contact-detail-icon" aria-hidden="true">✉️</div>
+                <div>
+                  <h4>E-Mail</h4>
+                  <p><a href="mailto:jamielahbeauty@gmx.de">jamielahbeauty@gmx.de</a></p>
+                </div>
+              </div>
+              <div class="contact-detail-item">
+                <div class="contact-detail-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                </div>
+                <div>
+                  <h4>Instagram</h4>
+                  <p><a href="https://www.instagram.com/jamielah.beauty.mg/" target="_blank" rel="noopener noreferrer">@jamielah.beauty.mg</a></p>
+                </div>
+              </div>
+              <div class="contact-detail-item">
+                <div class="contact-detail-icon" aria-hidden="true">🕐</div>
+                <div>
+                  <h4>Öffnungszeiten</h4>
+                  <p>Mo – Fr: 09:00 – 18:00 Uhr<br>Sa: 09:00 – 14:00 Uhr</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-wrapper reveal-right">
+            <form id="contact-form" novalidate>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="contact-name">Name *</label>
+                  <input type="text" id="contact-name" name="name" required autocomplete="name" placeholder="Dein Name">
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-email">E-Mail *</label>
+                  <input type="email" id="contact-email" name="email" required autocomplete="email" placeholder="deine@email.de">
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-phone">Telefon</label>
+                  <input type="tel" id="contact-phone" name="phone" autocomplete="tel" placeholder="+49 ...">
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-location">Standort *</label>
+                  <select id="contact-location" name="location" required>
+                    <option value="kaarst">Kaarst – Friedensstraße 14</option>
+                    <option value="moenchengladbach">Mönchengladbach – Eickener Markt 156e</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-service">Gewünschte Leistung</label>
+                  <select id="contact-service" name="service">
+                    <option value="">Bitte wählen...</option>
+                    <option value="gesichtsbehandlung">Gesichtsbehandlung</option>
+                    <option value="wimpern-brauen">Wimpern & Brauen</option>
+                    <option value="manikuere-pedikuere">Maniküre & Pediküre</option>
+                    <option value="permanent-makeup">Permanent Make-Up</option>
+                    <option value="haarentfernung">Dauerhafte Haarentfernung</option>
+                    <option value="wellness">Wellness & Entspannung</option>
+                    <option value="sonstiges">Sonstiges</option>
+                  </select>
+                </div>
+
+                <div class="form-group full-width">
+                  <label for="contact-message">Nachricht *</label>
+                  <textarea id="contact-message" name="message" rows="4" required placeholder="Erzähl uns, wie wir dir helfen können..."></textarea>
+                </div>
+              </div>
+
+              <div class="form-submit">
+                <button type="submit" class="btn btn-primary" id="submit-btn">Nachricht senden</button>
+              </div>
+            </form>
+
+            <div class="form-success" id="form-success">
+              <div class="form-success-icon" aria-hidden="true">✓</div>
+              <h3>Vielen Dank!</h3>
+              <p>Deine Nachricht wurde erfolgreich gesendet. Wir melden uns in Kürze bei dir.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======== FOOTER ======== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand Column -->
+        <div class="footer-brand">
+          <a href="#" class="logo">Jamielah<span>Beauty</span></a>
+          <p>Dein Premium Kosmetikstudio in Kaarst & Mönchengladbach. Wir bringen deine natürliche Schönheit zum Strahlen.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/jamielahbeauty/" target="_blank" rel="noopener noreferrer" class="footer-insta-btn" aria-label="Instagram Kaarst">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              <span>Kaarst</span>
+            </a>
+            <a href="https://www.instagram.com/jamielah.beauty.mg/" target="_blank" rel="noopener noreferrer" class="footer-insta-btn" aria-label="Instagram Mönchengladbach">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              <span>Mönchengladbach</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <nav class="footer-column" aria-label="Quick Links">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#hero">Startseite</a></li>
+            <li><a href="#services">Leistungen</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#values">Werte</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+          </ul>
+        </nav>
+
+        <!-- Kaarst -->
+        <div class="footer-column">
+          <h4>📍 Kaarst</h4>
+          <ul>
+            <li>Friedensstraße 14</li>
+            <li>41564 Kaarst</li>
+            <li><a href="tel:+491743844410">+49 174 3844410</a></li>
+            <li><a href="mailto:jamielahbeauty@gmx.de">jamielahbeauty@gmx.de</a></li>
+            <li>Mo–Fr 09–18 Uhr</li>
+          </ul>
+        </div>
+
+        <!-- Mönchengladbach -->
+        <div class="footer-column">
+          <h4>📍 Mönchengladbach</h4>
+          <ul>
+            <li>Eickener Markt 156e</li>
+            <li>41061 Mönchengladbach</li>
+            <li><a href="tel:+4917682063222">+49 176 82063222</a></li>
+            <li><a href="mailto:jamielahbeauty@gmx.de">jamielahbeauty@gmx.de</a></li>
+            <li>Mo–Fr 09–18 Uhr</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>&copy; 2026 Jamielah Beauty. Alle Rechte vorbehalten.</p>
+        <div class="footer-legal">
+          <a href="#">Impressum</a>
+          <a href="#">Datenschutz</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
