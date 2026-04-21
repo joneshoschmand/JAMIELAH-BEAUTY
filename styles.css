@@ -1742,6 +1742,13 @@ section {
   .form-grid {
     grid-template-columns: 1fr;
   }
+
+  /* Disable heavy blur animations on mobile */
+  .hero-bg::before,
+  .hero-bg::after {
+    animation: none !important;
+    display: none !important;
+  }
 }
 
 /* Mobile Portrait */

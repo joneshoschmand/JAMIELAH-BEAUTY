@@ -311,7 +311,7 @@ function initSmoothScroll() {
 /* ---------- Parallax Orb Effect ---------- */
 function initParallax() {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (prefersReducedMotion) return;
+  if (prefersReducedMotion || window.innerWidth <= 768) return;
 
   const hero = document.getElementById('hero');
   if (!hero) return;
