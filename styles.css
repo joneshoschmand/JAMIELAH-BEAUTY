@@ -1267,118 +1267,71 @@ section {
   color: var(--color-grey-dark);
 }
 
-/* Contact Form */
-.contact-form-wrapper {
+/* Contact WhatsApp Card */
+.contact-whatsapp-wrapper {
   background: var(--color-white);
   border-radius: var(--radius-lg);
   padding: var(--space-6);
   box-shadow: var(--shadow-lg);
   border: 1px solid var(--color-grey-light);
-}
-
-.form-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-3);
-}
-
-.form-group {
-  position: relative;
-}
-
-.form-group.full-width {
-  grid-column: 1 / -1;
-}
-
-.form-group label {
-  display: block;
-  font-size: 0.82rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: var(--color-grey);
-  margin-bottom: var(--space-1);
-  transition: color var(--transition-fast);
-}
-
-.form-group input,
-.form-group textarea,
-.form-group select {
-  width: 100%;
-  padding: var(--space-2) var(--space-2);
-  border: 1.5px solid var(--color-grey-light);
-  border-radius: var(--radius-sm);
-  background: var(--color-cream);
-  color: var(--color-grey-dark);
-  font-size: 0.95rem;
-  transition: all var(--transition-fast);
-  outline: none;
-}
-
-.form-group input:focus,
-.form-group textarea:focus,
-.form-group select:focus {
-  border-color: var(--color-accent);
-  background: var(--color-white);
-  box-shadow: 0 0 0 4px var(--color-accent-glow);
-}
-
-.form-group input:focus + label,
-.form-group textarea:focus + label {
-  color: var(--color-accent-dark);
-}
-
-.form-group textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-
-.form-group select {
-  appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%239A9590' viewBox='0 0 16 16'%3E%3Cpath d='M4 6l4 4 4-4'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 12px center;
-  padding-right: var(--space-5);
-}
-
-.form-submit {
-  margin-top: var(--space-3);
-}
-
-.form-submit .btn {
-  width: 100%;
-  padding: var(--space-2) var(--space-4);
-  font-size: 0.92rem;
-}
-
-.form-success {
-  display: none;
-  text-align: center;
-  padding: var(--space-5);
-}
-
-.form-success.visible {
-  display: block;
-}
-
-.form-success-icon {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--color-accent-light), var(--color-accent));
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto var(--space-3);
-  font-size: 1.8rem;
 }
 
-.form-success h3 {
-  margin-bottom: var(--space-1);
+.whatsapp-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-3);
+  max-width: 400px;
 }
 
-.form-success p {
+.whatsapp-icon-bg {
+  width: 84px;
+  height: 84px;
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-2);
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  animation: pulse-whatsapp 2s infinite ease-in-out;
+}
+
+@keyframes pulse-whatsapp {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+  70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); transform: scale(1.05); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); transform: scale(1); }
+}
+
+.whatsapp-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0;
+}
+
+.whatsapp-card p {
   color: var(--color-grey);
+  line-height: 1.6;
+}
+
+.btn-whatsapp {
+  background: #25D366;
+  color: #fff !important;
+  border-color: #25D366;
+  font-size: 0.95rem;
+  padding: var(--space-2) var(--space-5);
+  margin-top: var(--space-1);
+}
+
+.btn-whatsapp:hover {
+  background: #128C7E;
+  border-color: #128C7E;
+  color: #fff !important;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
 }
 
 /* ============================================
@@ -1739,9 +1692,7 @@ section {
     text-align: center;
   }
 
-  .form-grid {
-    grid-template-columns: 1fr;
-  }
+  /* Form removed */
 
   /* Disable heavy blur animations on mobile */
   .hero-bg::before,
@@ -1784,7 +1735,7 @@ section {
     grid-template-columns: 1fr;
   }
 
-  .contact-form-wrapper {
+  .contact-whatsapp-wrapper {
     padding: var(--space-4);
   }
 

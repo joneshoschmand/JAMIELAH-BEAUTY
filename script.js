@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initSmoothScroll();
   initParallax();
-  initContactForm();
+  // initContactForm(); has been removed
   initLocationSelector();
   initContactTabs();
   initServiceModals();
@@ -100,13 +100,18 @@ function initLocationSelector() {
       const contactTab = document.querySelector(`.contact-tab[data-tab="${location}"]`);
       if (contactTab) contactTab.click();
 
-      // Sync with form dropdown
-      const formSelect = document.getElementById('contact-location');
-      if (formSelect) formSelect.value = location;
-
-      // Close dropdown
-      selector.classList.remove('open');
-      toggle.setAttribute('aria-expanded', 'false');
+      // Sync with WhatsApp button link
+      const waBtn = document.getElementById('whatsapp-action-btn');
+      const waText = document.getElementById('whatsapp-action-text');
+      if (waBtn && waText) {
+        if (location === 'kaarst') {
+          waBtn.href = "https://wa.me/491743844410";
+          waText.textContent = "Nachricht an Kaarst";
+        } else {
+          waBtn.href = "https://wa.me/49117682063222"; // User requested exactly this number
+          waText.textContent = "Nachricht an Mönchengladbach";
+        }
+      }
     });
   });
 
@@ -174,9 +179,18 @@ function initContactTabs() {
         }
       });
 
-      // Sync form dropdown
-      const formSelect = document.getElementById('contact-location');
-      if (formSelect) formSelect.value = target;
+      // Sync WhatsApp button link
+      const waBtn = document.getElementById('whatsapp-action-btn');
+      const waText = document.getElementById('whatsapp-action-text');
+      if (waBtn && waText) {
+        if (target === 'kaarst') {
+          waBtn.href = "https://wa.me/491743844410";
+          waText.textContent = "Nachricht an Kaarst";
+        } else {
+          waBtn.href = "https://wa.me/49117682063222"; // User requested exactly this number
+          waText.textContent = "Nachricht an Mönchengladbach";
+        }
+      }
     });
   });
 }
@@ -340,84 +354,7 @@ function initParallax() {
   }, { passive: true });
 }
 
-/* ---------- Contact Form ---------- */
-function initContactForm() {
-  const form = document.getElementById('contact-form');
-  const successMessage = document.getElementById('form-success');
-
-  if (!form) return;
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    // Reset previous error states
-    form.querySelectorAll('.form-error').forEach(el => el.remove());
-    form.querySelectorAll('.error').forEach(el => el.classList.remove('error'));
-
-    // Validate
-    let isValid = true;
-    const fields = {
-      name: { el: document.getElementById('contact-name'), message: 'Bitte gib deinen Namen ein.' },
-      email: { el: document.getElementById('contact-email'), message: 'Bitte gib eine gültige E-Mail ein.' },
-      message: { el: document.getElementById('contact-message'), message: 'Bitte schreibe eine Nachricht.' },
-    };
-
-    // Name validation
-    if (!fields.name.el.value.trim()) {
-      showError(fields.name.el, fields.name.message);
-      isValid = false;
-    }
-
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(fields.email.el.value.trim())) {
-      showError(fields.email.el, fields.email.message);
-      isValid = false;
-    }
-
-    // Message validation
-    if (!fields.message.el.value.trim()) {
-      showError(fields.message.el, fields.message.message);
-      isValid = false;
-    }
-
-    if (!isValid) return;
-
-    // Simulate form submission
-    const submitBtn = document.getElementById('submit-btn');
-    submitBtn.textContent = 'Wird gesendet...';
-    submitBtn.disabled = true;
-
-    setTimeout(() => {
-      form.style.display = 'none';
-      successMessage.classList.add('visible');
-    }, 1200);
-  });
-
-  function showError(inputEl, message) {
-    inputEl.classList.add('error');
-    inputEl.style.borderColor = '#D4564E';
-
-    const errorEl = document.createElement('span');
-    errorEl.className = 'form-error';
-    errorEl.textContent = message;
-    errorEl.style.cssText = `
-      display: block;
-      font-size: 0.78rem;
-      color: #D4564E;
-      margin-top: 4px;
-    `;
-    inputEl.parentElement.appendChild(errorEl);
-
-    // Clear error on focus
-    inputEl.addEventListener('focus', () => {
-      inputEl.classList.remove('error');
-      inputEl.style.borderColor = '';
-      const existingError = inputEl.parentElement.querySelector('.form-error');
-      if (existingError) existingError.remove();
-    }, { once: true });
-  }
-}
+/* ---------- Form init has been removed (Replaced by WhatsApp Contact) ---------- */
 
 /* ---------- Active Nav Link on Scroll ---------- */
 (function initActiveNavLink() {
