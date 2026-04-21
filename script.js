@@ -108,7 +108,7 @@ function initLocationSelector() {
           waBtn.href = "https://wa.me/491743844410";
           waText.textContent = "Nachricht an Kaarst";
         } else {
-          waBtn.href = "https://wa.me/49117682063222"; // User requested exactly this number
+          waBtn.href = "https://wa.me/4917682063222";
           waText.textContent = "Nachricht an Mönchengladbach";
         }
       }
@@ -187,7 +187,7 @@ function initContactTabs() {
           waBtn.href = "https://wa.me/491743844410";
           waText.textContent = "Nachricht an Kaarst";
         } else {
-          waBtn.href = "https://wa.me/49117682063222"; // User requested exactly this number
+          waBtn.href = "https://wa.me/4917682063222";
           waText.textContent = "Nachricht an Mönchengladbach";
         }
       }
