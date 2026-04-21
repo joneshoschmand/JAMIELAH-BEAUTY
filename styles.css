@@ -1435,6 +1435,22 @@ section {
   color: var(--color-grey);
 }
 
+.footer-creator {
+  text-align: center;
+}
+
+.footer-creator a {
+  color: var(--color-white);
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent);
+  transition: color var(--transition-fast);
+}
+
+.footer-creator a:hover {
+  color: var(--color-accent-light);
+}
+
 .footer-legal {
   display: flex;
   gap: var(--space-3);
